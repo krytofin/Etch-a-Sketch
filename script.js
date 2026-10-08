@@ -30,7 +30,7 @@ function generateSquare(n=16){
     }
 }
 
-function cleanSquare(n=8){
+function cleanSquare(n=16){
     const lines = document.querySelectorAll(`.line`);
     lines.forEach((item)=>{
         item.remove()
@@ -44,7 +44,7 @@ const color_type = Object.freeze({
 });
 let currentType = color_type.oneColor;
 
-let size = 8;
+let size = 16;
 const cleanBtn = document.querySelector(`#clean`);
 const resizeBtn = document.querySelector(`#resize`);
 const randomizeBtn = document.querySelector(`#randomize`);

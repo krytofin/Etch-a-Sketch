@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    max-width: 50%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.line {
+    display: flex;
+    flex-direction: column;
+    margin-left: -3px; 
+    width: 100%;
+}
+.square {
+    border: 3px solid grey;
+    flex-shrink: 0;
+    aspect-ratio: 1;
+    width: 100%;
+    margin-top: -3px; 
+}

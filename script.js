@@ -12,6 +12,13 @@ function paintElement(element, type){
             element.style.backgroundColor = color;
             break;
     }
+    if (opacityEnable){
+        element.style.opacity = opacityStrength;
+        opacityStrength+=0.1;
+        if (opacityStrength > 1){
+            opacityStrength = 0.1;
+        }
+    }
 }
 
 function generateSquare(n=16){
@@ -48,6 +55,10 @@ let size = 16;
 const cleanBtn = document.querySelector(`#clean`);
 const resizeBtn = document.querySelector(`#resize`);
 const randomizeBtn = document.querySelector(`#randomize`);
+const opacityBtn = document.querySelector(`#opacity`)
+
+let opacityEnable = false;
+let opacityStrength = 0.1;
 
 randomizeBtn.addEventListener('click', ()=>{
     if (currentType == color_type.oneColor){
@@ -68,6 +79,10 @@ resizeBtn.addEventListener(`click`, ()=>{
         size = newSize;
         cleanSquare(size);
     }
+})
+
+opacityBtn.addEventListener(`click`, ()=>{
+    opacityEnable = !opacityEnable;
 })
 
 const container = document.querySelector(`.container`);

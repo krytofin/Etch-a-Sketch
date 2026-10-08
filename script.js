@@ -14,7 +14,7 @@ function paintElement(element, type){
     }
 }
 
-function generateSquare(n=8){
+function generateSquare(n=16){
     for (let i = 0; i < n; i++){
         let line = document.createElement('div')
         line.classList.add('line')

@@ -1,9 +1,12 @@
 *{
     box-sizing: border-box;
 }
+h1 {
+    text-align: center;
+}
 .container {
     display: flex;
-    max-width: 50%;
+    max-width: 30%;
     margin: 0 auto;
     justify-content: space-between;
 }
@@ -13,6 +16,9 @@
     margin: 0 auto;
     margin-bottom: 40px;
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 button {
     border: 2px solid black;

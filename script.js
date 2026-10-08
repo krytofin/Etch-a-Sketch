@@ -37,8 +37,18 @@ const color_type = Object.freeze({
 
 let size = 8;
 const cleanBtn = document.querySelector(`#clean`);
+const resizeBtn = document.querySelector(`#resize`);
+
 cleanBtn.addEventListener(`click`, ()=>{
     cleanSquare(size);
+})
+
+resizeBtn.addEventListener(`click`, ()=>{
+    let newSize = +prompt("Enter new size: 1-100");
+    if (newSize <= 100 && newSize > 0){
+        size = newSize;
+        cleanSquare(size);
+    }
 })
 
 const container = document.querySelector(`.container`);
